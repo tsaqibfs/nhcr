@@ -187,20 +187,23 @@ export const useAuthStore = defineStore('auth', () => {
     if (isMockMode.value) {
       user.value = null
       isMockMode.value = false
-      localStorage.removeItem('simajid_mock_user')
+      localStorage.clear()
+      sessionStorage.clear()
       loading.value = false
+      window.location.href = '/login'
       return
     }
 
     try {
-      const { error: signOutErr } = await supabase.auth.signOut()
-      if (signOutErr) throw signOutErr
-      user.value = null
+      await supabase.auth.signOut()
     } catch (err) {
-      error.value = err.message
       console.error('Signout error:', err)
     } finally {
+      user.value = null
+      localStorage.clear()
+      sessionStorage.clear()
       loading.value = false
+      window.location.href = '/login'
     }
   }
 

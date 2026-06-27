@@ -428,11 +428,7 @@ const openExpenseReportModal = () => {
     if (savedExpenses) {
       expenseReportItems.value = JSON.parse(savedExpenses).sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
     } else {
-      expenseReportItems.value = [
-        { id: 'exp-1', description: 'Santunan Anak Yatim Bulanan', amount: 2500000, created_at: '2026-06-24T15:30:00Z' },
-        { id: 'exp-2', description: 'Biaya Kebersihan & Listrik Masjid', amount: 1200000, created_at: '2026-06-20T11:00:00Z' },
-        { id: 'exp-3', description: 'Pembelian Kipas Angin Dinding', amount: 750000, created_at: '2026-06-15T09:00:00Z' }
-      ]
+      expenseReportItems.value = []
     }
   } catch (err) {
     console.error('Failed to load expense reports:', err)
@@ -461,7 +457,7 @@ onMounted(async () => {
     globalExpense.value = expensesList.reduce((acc, item) => acc + Number(item.amount), 0)
   } else {
     // default expenses fallback sum
-    globalExpense.value = 4450000 // 2500000 + 1200000 + 750000
+    globalExpense.value = 0
   }
 })
 

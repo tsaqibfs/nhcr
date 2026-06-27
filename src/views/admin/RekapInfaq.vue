@@ -267,26 +267,7 @@ const expenseColumns = [
   { key: 'actions', label: 'Aksi' }
 ]
 
-const defaultExpenses = [
-  {
-    id: 'exp-1',
-    description: 'Santunan Anak Yatim Bulanan',
-    amount: 2500000,
-    created_at: '2026-06-24T15:30:00Z'
-  },
-  {
-    id: 'exp-2',
-    description: 'Biaya Kebersihan & Listrik Masjid',
-    amount: 1200000,
-    created_at: '2026-06-20T11:00:00Z'
-  },
-  {
-    id: 'exp-3',
-    description: 'Pembelian Kipas Angin Dinding',
-    amount: 750000,
-    created_at: '2026-06-15T09:00:00Z'
-  }
-]
+const defaultExpenses = []
 
 onMounted(async () => {
   await infaqStore.fetchInfaq()
