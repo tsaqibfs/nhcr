@@ -167,12 +167,12 @@
                 <div class="flex items-center justify-between p-2.5 bg-white border border-slate-200 rounded-xl">
                   <div>
                     <p class="text-slate-400 font-bold uppercase text-[9px] tracking-wide">Bank Syariah Indonesia (BSI)</p>
-                    <p class="font-mono font-bold text-slate-700 text-sm mt-0.5">733 4444 888</p>
-                    <p class="text-slate-500 text-[10px]">a.n. ZAKAT DKM Masjid Jami SiMajid</p>
+                    <p class="font-mono font-bold text-slate-700 text-sm mt-0.5">713 6972 396</p>
+                    <p class="text-slate-500 text-[10px]">a.n. MASJID NURUL HUDA CITRA R</p>
                   </div>
                   <button 
                     type="button" 
-                    @click="copyToClipboard('7334444888')"
+                    @click="copyToClipboard('7136972396')"
                     class="text-emerald-600 hover:text-emerald-700 font-bold text-xs"
                   >
                     Salin
